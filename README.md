@@ -33,3 +33,28 @@ bash install.sh
 ## Notes
 - `oc_template.json` contains OpenCode's own system prompt (public, from the MIT-licensed CLI).
 - Replace placeholder values in `oc_fixed_headers.json` with your own captured headers if needed.
+
+## Windows
+
+Prerequisites:
+- Node.js + 9router: `npm i -g 9router@0.5.109`
+- Python 3: https://www.python.org/downloads/ (check "Add to PATH")
+- Bun: `powershell -c "irm bun.sh/install.ps1 | iex"` (restart shell afterwards)
+
+Then in PowerShell:
+```powershell
+$env:OPENCODE_API_KEY = "oc_sk_..."
+$env:OPENCODE_ORG_ID  = "wrk_..."
+cd 9router-opencode-patch
+.\install.ps1
+9router -t -n --skip-update
+```
+
+Keep the sidecar running. To stop it: `taskkill /F /IM bun.exe` (stops all bun processes) or kill the specific PID from `ocside.log`/Task Manager.
+
+## Daily use (Windows)
+Start the sidecar first, then 9router:
+```powershell
+Start-Process bun -ArgumentList "ocside.mjs" -WindowStyle Hidden
+9router -t -n --skip-update
+```
