@@ -1,0 +1,15 @@
+{
+  "Authorization": "Bearer oc_sk_YOUR_KEY_HERE",
+  "Content-Type": "application/json",
+  "User-Agent": "opencode/latest/2.1.4/cli",
+  "b3": "2247a17760af53c505cd72f6b8a7f217-593ac518572c1442-1-8f22cd9d31c007ff",
+  "traceparent": "00-2247a17760af53c505cd72f6b8a7f217-593ac518572c1442-01",
+  "x-opencode-client": "cli",
+  "x-opencode-org-id": "wrk_YOUR_ORG_ID_HERE",
+  "x-opencode-project": "YOUR_PROJECT_HASH_HERE",
+  "x-opencode-session": "ses_YOUR_SESSION_ID_HERE",
+  "x-opencode-session-id": "ses_YOUR_SESSION_ID_HERE",
+  "x-session-affinity": "ses_YOUR_SESSION_ID_HERE",
+  "x-session-id": "ses_YOUR_SESSION_ID_HERE",
+  "Accept": "*/*"
+}
